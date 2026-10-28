@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Олег Фомин — портфолио</title>
+<meta name="description" content="Олег Фомин: Telegram-боты, голосовой ИИ-ассистент, 3D в Blender.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1016;--panel:#111a23;--line:#223241;--text:#dbe6ee;--dim:#8497a6;--amber:#ffb23e;--cyan:#5fd4e6;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 Onest,system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-size:15px;color:var(--dim)}
+nav b{color:var(--text);font-weight:500}
+nav a{color:var(--dim);text-decoration:none;margin-left:20px}
+nav a:hover,nav a:focus-visible{color:var(--amber);outline:none}
+h1{font:600 clamp(36px,8vw,72px)/1.05 "IBM Plex Mono",monospace;margin:48px 0 20px;letter-spacing:-.025em}
+h1 span{color:var(--amber)}
+.lead{max-width:56ch;color:var(--dim);font-size:19px;margin:0 0 32px}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;font-size:15px;line-height:1.8;min-height:150px}
+.term .p{color:var(--amber)}
+.term .d{color:var(--dim)}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--amber);vertical-align:-2px;margin-left:2px;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+section{padding:84px 0 0}
+h2{font:600 28px/1.2 "IBM Plex Mono",monospace;margin:0 0 28px}
+.proj{border:1px solid var(--line);border-radius:12px;padding:28px;margin-bottom:22px;background:linear-gradient(180deg,var(--panel),var(--bg))}
+.proj h3{font:600 22px/1.25 "IBM Plex Mono",monospace;margin:0 0 6px}
+.tag{color:var(--cyan);font-size:14px;margin:0 0 14px}
+.proj p{margin:0 0 12px;max-width:64ch}
+.proj ul{margin:0 0 16px;padding-left:20px;color:var(--dim)}
+.proj li{margin-bottom:4px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.stack li{border:1px solid var(--line);border-radius:6px;padding:4px 11px;font:400 13px "IBM Plex Mono",monospace;color:var(--cyan)}
+.about p{max-width:62ch}
+.skills{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:20px 0 0;list-style:none}
+.skills li{border:1px solid var(--line);border-radius:6px;padding:6px 14px;font:400 14px "IBM Plex Mono",monospace}
+footer{margin-top:90px;padding:40px 0 56px;border-top:1px solid var(--line)}
+footer a{color:var(--amber);font:600 clamp(18px,4vw,26px) "IBM Plex Mono",monospace;word-break:break-all}
+footer a:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.caret{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="mono"><b>Олег Фомин</b><span><a href="#projects">проекты</a><a href="#about">обо мне</a><a href="#contact">связь</a></span></nav>
+
+<h1>Делаю боты,<br>ИИ и <span>3D</span>.</h1>
+<p class="lead">Пишу Telegram-ботов и голосовых ассистентов на Python, моделирую и рендерю в Blender. Беру заказы и собираю свои проекты.</p>
+
+<div class="term mono" id="term" aria-label="Список проектов"></div>
+
+<section id="projects">
+  <h2>Проекты</h2>
+
+  <article class="proj">
+    <h3>Бот расшифровки голосовых</h3>
+    <p class="tag mono">Telegram-бот · публичный</p>
+    <p>Принимает голосовые и аудио в Telegram и возвращает текст. Для тех, кому неудобно слушать.</p>
+    <ul>
+      <li>распознавание речи через Whisper</li>
+      <li>бесплатно 10 сообщений в день, по подписке без лимита</li>
+      <li>тёмный терминальный стиль оформления</li>
+    </ul>
+    <ul class="stack"><li>Python</li><li>Telegram Bot API</li><li>Whisper</li></ul>
+  </article>
+
+  <article class="proj">
+    <h3>Голосовой ассистент «Доступ»</h3>
+    <p class="tag mono">Python · Windows · личный проект</p>
+    <p>Ассистент в духе «Джарвиса»: слушает команды, отвечает голосом и думает через нейросеть.</p>
+    <ul>
+      <li>ИИ-провайдер Google Gemini подключается из самой программы</li>
+      <li>озвучка локальным голосом Piper</li>
+    </ul>
+    <ul class="stack"><li>Python 3.13</li><li>Google Gemini</li><li>Piper TTS</li></ul>
+  </article>
+
+  <article class="proj">
+    <h3>3D-модель автомобиля</h3>
+    <p class="tag mono">Blender · заказ для клиента</p>
+    <p>Фриланс-заказ: смоделировать машину и подготовить рендер.</p>
+    <ul class="stack"><li>Blender</li><li>моделирование</li><li>рендер</li></ul>
+  </article>
+</section>
+
+<section id="about" class="about">
+  <h2>Обо мне</h2>
+  <p>Меня зовут Олег. Мне нравится делать вещи, которыми можно сразу пользоваться: бота, который отвечает в чате, или ассистента, который говорит. Если у вас есть задача, напишите, и обсудим.</p>
+  <ul class="skills"><li>Python</li><li>Telegram-боты</li><li>ИИ и голос</li><li>Blender</li></ul>
+</section>
+
+<footer id="contact">
+  <p style="color:var(--dim);margin:0 0 10px">Нужен бот, ассистент или 3D-модель? Напишите:</p>
+  <a href="mailto:oleggazeta67@gmail.com">oleggazeta67@gmail.com</a>
+</footer>
+</div>
+
+<script>
+(function(){
+  var el=document.getElementById('term');
+  var lines=[['$ ','ls проекты/'],['',  'voice_to_text_bot/   доступ_ассистент/   car_model.blend'],['$ ','ready']];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function html(done,cur){
+    var s='';
+    for(var i=0;i<done.length;i++){s+=line(lines[i][0],lines[i][1])+'<br>';}
+    if(cur!==null){s+=line(lines[done.length][0],cur)+'<span class="caret"></span>';}
+    return s;
+  }
+  function line(p,t){return (p?'<span class="p">'+p+'</span>':'')+(p?t:'<span class="d">'+t+'</span>');}
+  if(reduce){el.innerHTML=html([0,1,2],null);return;}
+  var li=0,ci=0;
+  (function tick(){
+    if(li>=lines.length){el.innerHTML=html([0,1,2],null)+'<span class="caret"></span>';return;}
+    var t=lines[li][1];
+    el.innerHTML=html(lines.slice(0,li).map(function(_,k){return k;}),t.slice(0,ci));
+    if(ci<t.length){ci++;setTimeout(tick,li===1?10:45);}
+    else{li++;ci=0;setTimeout(tick,380);}
+  })();
+})();
+</script>
+</body>
+</html>
